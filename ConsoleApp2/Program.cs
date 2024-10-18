@@ -4,7 +4,10 @@ using System.Threading.Channels;
 using System.Collections.Concurrent;
 using System.Numerics;
 using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
+//ZADANIE1
 //int a = 4;
 //float fa = 2.34f;
 //double da = 4.1212323;
@@ -87,7 +90,7 @@ using System.Diagnostics.CodeAnalysis;
 
 
 
-
+// ZADANIE 2
 //void menu()
 //{
 //    Console.WriteLine("---------- Kalkulator ---------- \n1 Suma\n2 Roznica\n3 Iloczyn\n4 Iloraz\n5 Potegowanie\n6 Pierwiastek\n7 Trygonometria\n8 Wyjscie");
@@ -211,20 +214,103 @@ using System.Diagnostics.CodeAnalysis;
 //    Console.WriteLine($"Kosinus kata {degrees}°: {cosValue}");
 //    Console.WriteLine($"Tangens kata {degrees}°: {tanValue}");
 //}
- 
+
 
 //menu();
 
 
 
+//ZADANIE 3
+void menu()
+{
+    Console.WriteLine("Dzien dobry! Poprosze o wypelneniu tablice 10 liczb");
+    double[] numbers = new double[10];
+    for (int i = 0; i < numbers.Length; i++)
+    {
+        Console.Write($"Wprowadź liczbę {i + 1}: ");
+        numbers[i] = double.Parse(Console.ReadLine());
+    }
 
-//Napisz program umożliwiający wprowadzanie 10-ciu liczb rzeczywistych do tablicy. Następnie 
-//utwórz następujące funkcjonalności używając pętli for: 
-//• Wyświetlanie tablicy od pierwszego do ostatniego indeksu. 
-//• Wyświetlanie tablicy od ostatniego do pierwszego indeksu. 
-//• Wyświetlanie elementów o nieparzystych indeksach. 
-//• Wyświetlanie elementów o parzystych indeksach. 
-//Wyniki działania algorytmów wyświetlaj na konsoli. Dla wyboru powyższych funkcjonalności programu 
-//utwórz odpowiednie menu. Do obsługi menu użyć rozbudowanej konstrukcji else-if oraz pętli do-while. 
+    Console.WriteLine("\nTwoja tablica wyglada jako:");
 
+    for (int i = 0; i < numbers.Length; i++)
+    {
+        Console.Write(numbers[i] + " ");
+    }
 
+    Console.WriteLine();
+
+    Console.WriteLine("\nProsze wybrac zadanie (wprowadz tylko liczbe) :/");
+    Console.WriteLine("1. Wyświetlanie tablicy od pierwszego do ostatniego indeksu. ");
+    Console.WriteLine("2. Wyświetlanie tablicy od ostatniego do pierwszego indeksu.  ");
+    Console.WriteLine("3. Wyświetlanie elementów o nieparzystych indeksach. ");
+    Console.WriteLine("4. Wyświetlanie elementów o parzystych indeksach.  \n");
+    string choise = Console.ReadLine();
+
+    void kropka1()
+    {
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            Console.Write(numbers[i] + " ");
+        }
+    }
+
+    void kropka2()
+    {
+        for (int i = numbers.Length - 1; i >= 0; i--)
+        {
+            Console.Write(numbers[i] + " ");
+        }
+    }
+
+    void kropka3()
+    {
+        for (int i = 0; i < numbers.Length; i=i+2)
+        {
+            Console.Write(numbers[i] + " ");
+        }
+    }
+
+    void kropka4()
+    {
+        for (int i = 1; i < numbers.Length; i = i + 2)
+        {
+            Console.Write(numbers[i] + " ");
+        }
+    }
+
+    if (choise == "1")
+    {
+        Console.WriteLine("\nWyświetlanie tablicy od pierwszego do ostatniego indeksu:");
+        kropka1();
+        Console.WriteLine("\n");
+    }
+
+    else if (choise == "2")
+    {
+        Console.WriteLine("\nWyświetlanie tablicy od ostatniego do pierwszego indeksu:");
+        kropka2();
+        Console.WriteLine("\n");
+    }
+    
+    else if (choise == "3")
+    {
+        Console.WriteLine("\nWyświetlanie elementów o nieparzystych indeksach:");
+        kropka3();
+        Console.WriteLine("\n");
+    }
+
+    else if (choise == "4")
+    {
+        Console.WriteLine("\n Wyświetlanie elementów o parzystych indeksach:");
+        kropka4();
+        Console.WriteLine("\n");
+    }
+
+    else
+    {
+        Console.WriteLine("Błąd! Cos poszlo nie tak, sproboj ponownie :) \n");
+    }
+}
+
+menu();
