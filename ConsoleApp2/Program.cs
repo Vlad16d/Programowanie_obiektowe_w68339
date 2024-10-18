@@ -85,137 +85,146 @@ using System.Diagnostics.CodeAnalysis;
 
 
 
-//Napisz kalkulator obliczający: sumę, różnicę, iloczyn, iloraz, potęgę, pierwiastek, oraz wartości
-//funkcji trygonometrycznych dla zadanego kąta. Użyj biblioteki Math np. Math.Sin(2.5). Proszę
-//pamiętać, że wartości kąta podawane do funkcji mierzone są miarą łukową. Wyniki działania
-//algorytmów wyświetlaj na konsoli. Do obsługi menu proszę użyć konstrukcji switch-case oraz
-//pętli while.
+
+
+
+//void menu()
+//{
+//    Console.WriteLine("---------- Kalkulator ---------- \n1 Suma\n2 Roznica\n3 Iloczyn\n4 Iloraz\n5 Potegowanie\n6 Pierwiastek\n7 Trygonometria\n8 Wyjscie");
+//    Console.WriteLine("wubierz opcje: ");
+//    int choise = Convert.ToInt32(Console.ReadLine());
+
+//    switch (choise)
+//    {
+//        case 1: Total(); break;             //Сумма
+//        case 2: Difference(); break;        //Разность
+//        case 3: ProductNumber(); break;     //Произведение
+//        case 4: QuotientNumber(); break;    //Частное
+//        case 5: PotentialNumber(); break;   //Степень
+//        case 6: SquartilNumber(); break;    //Корень
+//        case 7: Trigonometry(); break;    //Тригонометрические значения
+//        case 8: Close(); break;
+
+//        default:
+//            Console.WriteLine("Bladne dane ");
+//            break;
+//    }
+//}
+
+//void Close()
+//{
+//    Console.WriteLine("Koniec programu :))");
+//}
+
+//void Total()
+//{
+//    Console.WriteLine("Wprowadz ilosc elementow: ");
+//    int ilosc = int.Parse(Console.ReadLine());
+
+//    List<double> variables = new List<double>();
+
+//    for (int i = 0; i < ilosc; i++)
+//    {
+//        Console.Write($"Wprowadz element {i + 1}: ");
+//        variables.Add(double.Parse(Console.ReadLine()));
+//    }
+
+//    double sum = 0;
+//    variables.ForEach(v => sum += v);
+
+//    Console.WriteLine($"Suma: {sum}");
+//}
+
+
+//void Difference()
+//{
+//    Console.WriteLine("Wprowadz ilosc elementow: ");
+//    int ilosc = int.Parse(Console.ReadLine());
+
+//    List<double> variables = new List<double>();
+
+//    for (int i = 0; i < ilosc; i++)
+//    {
+//        Console.Write($"Wprowadz element {i + 1}: ");
+//        variables.Add(double.Parse(Console.ReadLine()));
+//    }
+
+//    double result = variables[0];
+//    for (int i = 1; i < variables.Count; i++)
+//    {
+//        result -= variables[i];
+//    }
+
+//    Console.WriteLine($"Roznica: {result}");
+//}
+
+//void ProductNumber()
+//{
+//    int pn1, pn2;
+//    Console.WriteLine("Wprowadz 1 liczbe dla mnozenia: ");
+//    pn1= Convert.ToInt32(Console.ReadLine());
+//    Console.WriteLine("Wprowadz 2 liczbe dla mnozenia: ");
+//    pn2 = Convert.ToInt32(Console.ReadLine());
+//    Console.WriteLine(pn1 * pn2 );
+//}
+
+//void QuotientNumber()
+//{
+//    int dz1,dz2;
+//    Console.WriteLine("Wprowadz 1 liczbe dla podzielenia: ");
+//    dz1 = Convert.ToInt32(Console.ReadLine());
+//    Console.WriteLine("Wprowadz 2 liczbe dla podzielenia: ");
+//    dz2 = Convert.ToInt32(Console.ReadLine());
+//    Console.WriteLine(dz1 / dz2);
+//}
+
+//void PotentialNumber()
+//{
+//    int a, b;
+//    Console.WriteLine("Wprowadz liczbe: ");
+//    a = Convert.ToInt32(Console.ReadLine());
+//    Console.WriteLine("Wprowadz potega: ");
+//    b = Convert.ToInt32(Console.ReadLine());
+//    Console.WriteLine(Math.Pow(a, b));
+//}
+
+//void SquartilNumber()
+//{
+//    int s, b;
+//    Console.WriteLine("Wprowadz liczbe dla pierwiastka: ");
+//    s = Convert.ToInt32(Console.ReadLine());
+//    Console.WriteLine(Math.Sqrt(s));
+//}
+
+//void Trigonometry()
+//{
+//    Console.WriteLine("Wprowadź kąt w stopniach:");
+//    double degrees = double.Parse(Console.ReadLine());
+
+//    double radians = degrees * (Math.PI / 180);
+
+//    double sinValue = Math.Sin(radians);
+//    double cosValue = Math.Cos(radians);
+//    double tanValue = Math.Tan(radians);
+
+//    Console.WriteLine($"Sinus kata {degrees}°: {sinValue}");
+//    Console.WriteLine($"Kosinus kata {degrees}°: {cosValue}");
+//    Console.WriteLine($"Tangens kata {degrees}°: {tanValue}");
+//}
+ 
+
+//menu();
 
 
 
 
-void menu()
-{
-    Console.WriteLine("---------- Kalkulator ---------- \n1 Suma\n2 Roznica\n3 Iloczyn\n4 Iloraz\n5 Potegowanie\n6 Pierwiastek\n7 Trygonometria\n8 Wyjscie");
-    Console.WriteLine("wubierz opcje: ");
-    int choise = Convert.ToInt32(Console.ReadLine());
-
-    switch (choise)
-    {
-        case 1: Total(); break;             //Сумма
-        case 2: Difference(); break;        //Разность
-        case 3: ProductNumber(); break;     //Произведение
-        case 4: QuotientNumber(); break;    //Частное
-        case 5: PotentialNumber(); break;   //Степень
-        case 6: SquartilNumber(); break;    //Корень
-        case 7: Trigonometry(); break;    //Тригонометрические значения
-        case 8: Close(); break;
-
-        default:
-            Console.WriteLine("Bladne dane ");
-            break;
-    }
-}
-
-void Close()
-{
-    Console.WriteLine("Koniec programu :))");
-}
-
-void Total()
-{
-    Console.WriteLine("Wprowadz ilosc elementow: ");
-    int ilosc = int.Parse(Console.ReadLine());
-
-    List<double> variables = new List<double>();
-
-    for (int i = 0; i < ilosc; i++)
-    {
-        Console.Write($"Wprowadz element {i + 1}: ");
-        variables.Add(double.Parse(Console.ReadLine()));
-    }
-
-    double sum = 0;
-    variables.ForEach(v => sum += v);
-
-    Console.WriteLine($"Suma: {sum}");
-}
+//Napisz program umożliwiający wprowadzanie 10-ciu liczb rzeczywistych do tablicy. Następnie 
+//utwórz następujące funkcjonalności używając pętli for: 
+//• Wyświetlanie tablicy od pierwszego do ostatniego indeksu. 
+//• Wyświetlanie tablicy od ostatniego do pierwszego indeksu. 
+//• Wyświetlanie elementów o nieparzystych indeksach. 
+//• Wyświetlanie elementów o parzystych indeksach. 
+//Wyniki działania algorytmów wyświetlaj na konsoli. Dla wyboru powyższych funkcjonalności programu 
+//utwórz odpowiednie menu. Do obsługi menu użyć rozbudowanej konstrukcji else-if oraz pętli do-while. 
 
 
-void Difference()
-{
-    Console.WriteLine("Wprowadz ilosc elementow: ");
-    int ilosc = int.Parse(Console.ReadLine());
-
-    List<double> variables = new List<double>();
-
-    for (int i = 0; i < ilosc; i++)
-    {
-        Console.Write($"Wprowadz element {i + 1}: ");
-        variables.Add(double.Parse(Console.ReadLine()));
-    }
-
-    double result = variables[0];
-    for (int i = 1; i < variables.Count; i++)
-    {
-        result -= variables[i];
-    }
-
-    Console.WriteLine($"Roznica: {result}");
-}
-
-void ProductNumber()
-{
-    int pn1, pn2;
-    Console.WriteLine("Wprowadz 1 liczbe dla mnozenia: ");
-    pn1= Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine("Wprowadz 2 liczbe dla mnozenia: ");
-    pn2 = Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine(pn1 * pn2 );
-}
-
-void QuotientNumber()
-{
-    int dz1,dz2;
-    Console.WriteLine("Wprowadz 1 liczbe dla podzielenia: ");
-    dz1 = Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine("Wprowadz 2 liczbe dla podzielenia: ");
-    dz2 = Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine(dz1 / dz2);
-}
-
-void PotentialNumber()
-{
-    int a, b;
-    Console.WriteLine("Wprowadz liczbe: ");
-    a = Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine("Wprowadz potega: ");
-    b = Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine(Math.Pow(a, b));
-}
-
-void SquartilNumber()
-{
-    int s, b;
-    Console.WriteLine("Wprowadz liczbe dla pierwiastka: ");
-    s = Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine(Math.Sqrt(s));
-}
-
-void Trigonometry()
-{
-    Console.WriteLine("Wprowadź kąt w stopniach:");
-    double degrees = double.Parse(Console.ReadLine());
-
-    double radians = degrees * (Math.PI / 180);
-
-    double sinValue = Math.Sin(radians);
-    double cosValue = Math.Cos(radians);
-    double tanValue = Math.Tan(radians);
-
-    Console.WriteLine($"Sinus kata {degrees}°: {sinValue}");
-    Console.WriteLine($"Kosinus kata {degrees}°: {cosValue}");
-    Console.WriteLine($"Tangens kata {degrees}°: {tanValue}");
-}
-
-menu();
