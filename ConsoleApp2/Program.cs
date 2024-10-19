@@ -318,65 +318,87 @@ using System.Data;
 
 
 //ZADANIE 4
+//void tablica()
+//{
+//    Console.WriteLine("Wprowadz 10 liczb");
+//    double[] numbers = new double[10];
+//    double sum = 0, iloczyn = 1, srednia = 0;
+//    for (int i = 0; i < numbers.Length; i++)
+//    {
+//        Console.WriteLine($"Wprowadz {i+1} element:");
+//        numbers[i] = double.Parse(Console.ReadLine());
+//    }
 
-//• wyznacz wartość minimalną,
-//• wyznacz wartość maksymalną. 
-//Wyniki działania algorytmów wyświetlaj na konsoli. 
+//    Console.WriteLine("\nTwoja tablica: ");
 
-void tablica()
+//    for (int i = 0; i < numbers.Length; i++)
+//    {
+//        Console.Write(numbers[i] + " ");
+//    }
+
+//    Console.WriteLine("");
+
+//    for (int i=0; i< numbers.Length; i++)
+//    {
+//        sum += numbers[i];
+//    }
+//    Console.WriteLine("\nSuma tablicy: " + sum);
+
+//    for (int i = 0; i < numbers.Length; i++)
+//    {
+//        iloczyn *= numbers[i];
+//    }
+//    Console.WriteLine("\nIloczyn tablicy: " + iloczyn);
+
+//    Console.WriteLine("\nSrednia tablicy: " + (sum/10));
+
+//    double min = numbers[0];
+//    for (int i=1; i < numbers.Length; i++)
+//    {
+//        if (numbers[i] < min)
+//        {
+//            min = numbers[i];
+//        }
+//    }
+//    Console.WriteLine("\nMinimalna tablicy: " + min);
+
+//    double max = numbers[0];
+//    for (int i = 1; i < numbers.Length; i++)
+//    {
+//        if (numbers[i] > max)
+//        {
+//            max = numbers[i];
+//        }
+//    }
+//    Console.WriteLine("\nMaksymalna tablicy: " + max);
+
+//}
+
+//tablica();
+
+
+
+//ZADANIE 5
+//Napisz program wyświetlający liczby od 20-0, z wyłączeniem liczb {2,6,9,15,19}. Do realizacji 
+//zadania wyłączenia użyj instrukcji continue;
+
+void cont()
 {
-    Console.WriteLine("Wprowadz 10 liczb");
-    double[] numbers = new double[10];
-    double sum = 0, iloczyn = 1, srednia = 0;
-    for (int i = 0; i < numbers.Length; i++)
+    Console.WriteLine("Liczby od 0 do 20 (bez 2,6,9,15,19): ");
+    for (int i = 0; i <=20; i++)
     {
-        Console.WriteLine($"Wprowadz {i+1} element:");
-        numbers[i] = double.Parse(Console.ReadLine());
-    }
-
-    Console.WriteLine("\nTwoja tablica: ");
-
-    for (int i = 0; i < numbers.Length; i++)
-    {
-        Console.Write(numbers[i] + " ");
-    }
-
-    Console.WriteLine("");
-
-    for (int i=0; i< numbers.Length; i++)
-    {
-        sum += numbers[i];
-    }
-    Console.WriteLine("\nSuma tablicy: " + sum);
-
-    for (int i = 0; i < numbers.Length; i++)
-    {
-        iloczyn *= numbers[i];
-    }
-    Console.WriteLine("\nIloczyn tablicy: " + iloczyn);
-
-    Console.WriteLine("\nSrednia tablicy: " + (sum/10));
-
-    double min = numbers[0];
-    for (int i=1; i < numbers.Length; i++)
-    {
-        if (numbers[i] < min)
+        
+        if (i == 2 || i == 6 || i == 9) 
         {
-            min = numbers[i];
+            continue; 
         }
-    }
-    Console.WriteLine("\nMinimalna tablicy: " + min);
 
-    double max = numbers[0];
-    for (int i = 1; i < numbers.Length; i++)
-    {
-        if (numbers[i] > max)
+        if (i == 15 || i == 19)
         {
-            max = numbers[i];
+            continue;
         }
+        Console.WriteLine(i);
     }
-    Console.WriteLine("\nMaksymalna tablicy: " + max);
-
 }
 
-tablica();
+cont();
