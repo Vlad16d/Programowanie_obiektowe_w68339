@@ -379,26 +379,63 @@ using System.Data;
 
 
 //ZADANIE 5
-//Napisz program wyświetlający liczby od 20-0, z wyłączeniem liczb {2,6,9,15,19}. Do realizacji 
-//zadania wyłączenia użyj instrukcji continue;
+//void cont()
+//{
+//    Console.WriteLine("Liczby od 0 do 20 (bez 2,6,9,15,19): ");
+//    for (int i = 0; i <=20; i++)
+//    {
 
-void cont()
-{
-    Console.WriteLine("Liczby od 0 do 20 (bez 2,6,9,15,19): ");
-    for (int i = 0; i <=20; i++)
-    {
-        
-        if (i == 2 || i == 6 || i == 9) 
-        {
-            continue; 
-        }
+//        if (i == 2 || i == 6 || i == 9) 
+//        {
+//            continue; 
+//        }
 
-        if (i == 15 || i == 19)
+//        if (i == 15 || i == 19)
+//        {
+//            continue;
+//        }
+//        Console.WriteLine(i);
+//    }
+//}
+
+//cont();
+
+
+
+//ZADANIE 6
+//Napisz program, który w nieskończoność pyta użytkownika o liczby całkowite. Pętla 
+//nieskończona powinna się zakończyć gdy użytkownik wprowadzi liczbę mniejszą od zera.
+
+void wh() { 
+    while (true)
+    { 
+        Console.WriteLine("\nWprowadz liczbe cakowite: ");
+        int n = Convert.ToInt32(Console.ReadLine());
+        if ( n < 0)
         {
-            continue;
+            Console.WriteLine("Stop, liczba jest < 0 :( ");
+            break;
         }
-        Console.WriteLine(i);
+        Console.WriteLine("\nTwoja liczba calkowita ktora > 0: " + n);
     }
 }
+wh();
+//lub
+void fr() {
 
-cont();
+    for (int i = 0; true; i++)
+    {
+        Console.WriteLine("\nWprowadz liczbe cakowite: ");
+        int n = Convert.ToInt32(Console.ReadLine());
+        if (n < 0)
+        {
+            Console.WriteLine("Stop, liczba jest < 0 :( ");
+            break;
+        }
+        Console.WriteLine("\nTwoja liczba calkowita ktora > 0: " + n);
+    }
+
+}
+
+
+fr();
