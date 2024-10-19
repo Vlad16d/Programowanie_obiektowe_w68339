@@ -406,36 +406,80 @@ using System.Data;
 //Napisz program, który w nieskończoność pyta użytkownika o liczby całkowite. Pętla 
 //nieskończona powinna się zakończyć gdy użytkownik wprowadzi liczbę mniejszą od zera.
 
-void wh() { 
-    while (true)
-    { 
-        Console.WriteLine("\nWprowadz liczbe cakowite: ");
-        int n = Convert.ToInt32(Console.ReadLine());
-        if ( n < 0)
-        {
-            Console.WriteLine("Stop, liczba jest < 0 :( ");
-            break;
-        }
-        Console.WriteLine("\nTwoja liczba calkowita ktora > 0: " + n);
-    }
-}
-wh();
-//lub
-void fr() {
+//void wh() { 
+//    while (true)
+//    { 
+//        Console.WriteLine("\nWprowadz liczbe cakowite: ");
+//        int n = Convert.ToInt32(Console.ReadLine());
+//        if ( n < 0)
+//        {
+//            Console.WriteLine("Stop, liczba jest < 0 :( ");
+//            break;
+//        }
+//        Console.WriteLine("\nTwoja liczba calkowita ktora > 0: " + n);
+//    }
+//}
+//wh();
+////lub
+//void fr() {
 
-    for (int i = 0; true; i++)
+//    for (int i = 0; true; i++)
+//    {
+//        Console.WriteLine("\nWprowadz liczbe cakowite: ");
+//        int n = Convert.ToInt32(Console.ReadLine());
+//        if (n < 0)
+//        {
+//            Console.WriteLine("Stop, liczba jest < 0 :( ");
+//            break;
+//        }
+//        Console.WriteLine("\nTwoja liczba calkowita ktora > 0: " + n);
+//    }
+
+//}
+
+
+//fr();
+
+
+
+//ZADANIE 7
+//Napisz program umożliwiający wprowadzanie n liczb oraz sortujący te liczby metodą 
+//bąbelkową lub wstawiania. Wyniki wyświetlaj na konsoli.
+
+Console.WriteLine("Wprowadz ilosc liczb: ");
+int n = Convert.ToInt32(Console.ReadLine());
+int[] numbers = new int[n];
+
+for (int i = 0; i < n; i++)
+{
+    Console.WriteLine($"Wprowadz {i+1} element: ");
+    numbers[i] = Convert.ToInt32(Console.ReadLine());
+}
+
+Console.WriteLine("\nWprowadzone liczby:");
+for (int i = 0; i < n; i++)
+{
+    Console.Write(numbers[i] + " ");
+}
+
+// BubbleSort
+for  (int i = 0;i < n - 1; i++)
+{
+    for (int j = 0; j < n - 1; j++)
     {
-        Console.WriteLine("\nWprowadz liczbe cakowite: ");
-        int n = Convert.ToInt32(Console.ReadLine());
-        if (n < 0)
+        if (numbers[j] > numbers[j + 1])
         {
-            Console.WriteLine("Stop, liczba jest < 0 :( ");
-            break;
+            int temp = numbers[j];
+            numbers[j] = numbers[j + 1];
+            numbers[j + 1] = temp;
         }
-        Console.WriteLine("\nTwoja liczba calkowita ktora > 0: " + n);
     }
-
 }
 
+Console.WriteLine("\n\nTablica posortowana:");
+for (int i = 0; i < n; i++)
+{
+    Console.Write(numbers[i] + " ");
+}
 
-fr();
+Console.WriteLine();
