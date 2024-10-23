@@ -23,17 +23,18 @@ using SharpLab;
 
 
 // --- Main ---
+//zad1
 
+//try
+//{
+//    Person person = new Person("jan", "nowak", 12);
+//    person.View();
+//}
 
-try
-{
-    Person person = new Person("jan", "nowak", 12);
-    person.View();
-}
+//catch(ArgumentException ex)
+//{
+//    Console.WriteLine(ex.Message);
+//}
 
-catch(ArgumentException ex)
-{
-    Console.WriteLine(ex.Message);
-}
 
 // ------
