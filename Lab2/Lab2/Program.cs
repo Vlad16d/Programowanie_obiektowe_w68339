@@ -73,18 +73,77 @@ namespace SharpLab;
 
 
 //zad2
+//class Program
+//{
+//    static void Main(string[] args)
+//    {
+//        // Tworzenie nowego konta bankowego z właścicielem i początkowym saldem
+//        BankAccount konto = new BankAccount("Jan Kowalski", 1000);
+
+//        // Dokonanie wpłaty i wypłaty
+//        konto.Wplata(500);    // Saldo: 1500
+//        konto.Wyplata(200);   // Saldo: 1300
+
+//        // Wyświetlenie aktualnego salda
+//        Console.WriteLine($"Saldo: {konto.Saldo}");
+//    }
+//}
+
+
+
+
+// zad3
+
+//class Program
+//{
+//    static void Main(string[] args)
+//    {
+//        Student student1 = new Student("Jan", "Kowalski");
+
+//        student1.DodajOcene(4);
+//        student1.DodajOcene(5);
+//        student1.DodajOcene(3);
+
+//        student1.WyswietlOceny();
+//        Console.WriteLine($"Średnia ocen: {student1.SredniaOcen:F2}");
+
+
+
+//        Student student2 = new Student("Pawel", "Kowalski");
+
+//        student2.DodajOcene(3);
+//        student2.DodajOcene(5);
+//        student2.DodajOcene(2);
+
+//        student2.WyswietlOceny();
+//        Console.WriteLine($"Średnia ocen: {student2.SredniaOcen:F2}");
+//    }
+//}
+
+
+
+//zad4
 class Program
 {
     static void Main(string[] args)
     {
-        // Tworzenie nowego konta bankowego z właścicielem i początkowym saldem
-        BankAccount konto = new BankAccount("Jan Kowalski", 1000);
+        Liczby liczba1 = new Liczby(50);
+        liczba1.WypiszStan();
+        
+        liczba1.Dodaj(20);
+        liczba1.WypiszStan();
 
-        // Dokonanie wpłaty i wypłaty
-        konto.Wplata(500);    // Saldo: 1500
-        konto.Wyplata(200);   // Saldo: 1300
+        liczba1.Odejmij(10);
+        liczba1.WypiszStan(); 
 
-        // Wyświetlenie aktualnego salda
-        Console.WriteLine($"Saldo: {konto.Saldo}");
+        Liczby liczba2 = new Liczby(100);
+        liczba2.WypiszStan(); 
+
+        
+        liczba2.Dodaj(50);
+        liczba2.WypiszStan(); 
+
+        liczba2.Odejmij(25);
+        liczba2.WypiszStan();
     }
 }
