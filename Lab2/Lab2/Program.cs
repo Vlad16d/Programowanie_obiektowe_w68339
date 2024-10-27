@@ -123,27 +123,51 @@ namespace SharpLab;
 
 
 //zad4
+//class Program
+//{
+//    static void Main(string[] args)
+//    {
+//        Liczby liczba1 = new Liczby(50);
+//        liczba1.WypiszStan();
+
+//        liczba1.Dodaj(20);
+//        liczba1.WypiszStan();
+
+//        liczba1.Odejmij(10);
+//        liczba1.WypiszStan(); 
+
+//        Liczby liczba2 = new Liczby(100);
+//        liczba2.WypiszStan(); 
+
+
+//        liczba2.Dodaj(50);
+//        liczba2.WypiszStan(); 
+
+//        liczba2.Odejmij(25);
+//        liczba2.WypiszStan();
+//    }
+//}
+
+
+
+// zad 5
+
 class Program
 {
     static void Main(string[] args)
     {
-        Liczby liczba1 = new Liczby(50);
-        liczba1.WypiszStan();
-        
-        liczba1.Dodaj(20);
-        liczba1.WypiszStan();
+        int[] liczby = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-        liczba1.Odejmij(10);
-        liczba1.WypiszStan(); 
+        Sumator sumator = new Sumator(liczby);
 
-        Liczby liczba2 = new Liczby(100);
-        liczba2.WypiszStan(); 
+        Console.WriteLine("Suma wszystkich elementów: " + sumator.Suma());
+        Console.WriteLine("Suma elementów podzielnych przez 2: " + sumator.SumaPodziel2());
+        Console.WriteLine("Liczba elementów w tablicy: " + sumator.IleElementow());
 
-        
-        liczba2.Dodaj(50);
-        liczba2.WypiszStan(); 
+        sumator.WszystkieElementy();
 
-        liczba2.Odejmij(25);
-        liczba2.WypiszStan();
+        int lowIndex = 3;
+        int highIndex = 8;
+        sumator.ElementyWZakresie(lowIndex, highIndex);
     }
 }

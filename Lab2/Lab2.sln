@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab2", "Lab2\Lab2.csproj", "{DA3DA74F-6E84-476B-A8C4-3E6544FFC857}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab2", "Lab2\Lab2.csproj", "{DA3DA74F-6E84-476B-A8C4-3E6544FFC857}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{871D8FF4-CF07-4ABD-877F-96154AE29983}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
